@@ -1,6 +1,6 @@
 # Trust Deed Review
 
-This repository contains the knowledge and instruction assets for a no-action Custom GPT that reviews Australian trust deeds and company reports, extracts clause-backed trust facts, and prepares a Markdown trust review checklist for practitioner review.
+This repository contains the knowledge and instruction assets for a Custom GPT that reviews Australian trust deeds and company reports, extracts clause-backed trust facts, and prepares a Markdown trust review checklist for accountant or legal practitioner review.
 
 It does not call external endpoints and does not generate final Word minute templates. Matter-specific trust deeds and company reports should be uploaded only in the relevant GPT chat, not committed to this repository or uploaded as GPT Knowledge.
 
