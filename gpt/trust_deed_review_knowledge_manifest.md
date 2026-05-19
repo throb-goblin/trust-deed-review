@@ -1,4 +1,4 @@
-# No-Action GPT Knowledge Manifest
+# Trust Deed Review GPT Knowledge Manifest
 
 Use this file to set up the alternative GPT that prepares the trust review checklist in chat without using an action endpoint.
 
@@ -6,14 +6,14 @@ Use this file to set up the alternative GPT that prepares the trust review check
 
 Upload:
 
-- `gpt/no_action_trust_review_instructions.md`
+- `gpt/trust_deed_review_instructions.md`
 - `gpt/field_dictionary.md`
 - `Trust Review Checklist.csv`
 - `templates/fieldmaps/checklist_helper_map.json`
 
 Optional:
 
-- `gpt/no_action_conversation_starters.md`
+- `gpt/trust_deed_review_conversation_starters.md`
 
 ## Do Not Upload These As Knowledge
 
@@ -21,7 +21,7 @@ Optional:
 - Matter-specific company reports.
 - Client files.
 - `templates/source/*.docm` or `templates/source/*.dotm`.
-- `openapi/trust-minute-action.openapi.yaml`.
+- Action OpenAPI schemas.
 
 Matter documents should be uploaded only inside the relevant GPT chat.
 
