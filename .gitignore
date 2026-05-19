@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.env
+.env.*
+
+# Matter/client documents should be uploaded in chat, not committed.
+*.pdf
+*.doc
+*.docx
+*.docm
+*.dotm
+*.dotx
