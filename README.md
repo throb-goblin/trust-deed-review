@@ -10,8 +10,7 @@ It does not call external endpoints and does not generate final Word minute temp
 - `gpt/trust_deed_review_knowledge_manifest.json`: Setup checklist for GPT Knowledge.
 - `gpt/trust_deed_review_conversation_starters.md`: Optional conversation starters.
 - `gpt/field_dictionary.json`: Canonical fields and drafting guardrails.
-- `Trust Review Checklist.csv`: Clean checklist row list.
-- `templates/fieldmaps/checklist_helper_map.json`: Private helper and mapping context.
+- `templates/fieldmaps/trust_review_checklist.json`: Checklist rows, helper context and canonical mapping.
 
 ## GPT Setup
 
@@ -24,3 +23,5 @@ It does not call external endpoints and does not generate final Word minute temp
 ## Scope
 
 The GPT prepares extraction summaries, unresolved issue lists and Markdown checklists. It is a drafting aid for review by an Australian legal practitioner and is not legal advice.
+
+The review-only checklist does not include income distribution minute template execution-layout rows. Those belong in the separate `income-distribution-minute-template-creator` repository.

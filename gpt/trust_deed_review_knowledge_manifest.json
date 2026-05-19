@@ -14,8 +14,7 @@
   "instructions_file": "gpt/trust_deed_review_instructions.md",
   "knowledge_files": [
     "gpt/field_dictionary.json",
-    "Trust Review Checklist.csv",
-    "templates/fieldmaps/checklist_helper_map.json"
+    "templates/fieldmaps/trust_review_checklist.json"
   ],
   "optional_files": [
     "gpt/trust_deed_review_conversation_starters.md"

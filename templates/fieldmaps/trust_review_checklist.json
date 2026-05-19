@@ -1,7 +1,6 @@
 {
   "version": 1,
-  "description": "Helper and mapping context for Trust Review Checklist.csv. This file is for the service/model only; generated Markdown and DOCX output must not expose helper_context values.",
-  "source_csv": "Trust Review Checklist.csv",
+  "description": "Checklist row, helper and canonical mapping context for trust deed review. Helper context is for the model/service only and must not be shown to users.",
   "output_columns": [
     "Item",
     "Relevant clause(s)",
@@ -13,6 +12,7 @@
     "Review",
     "Approved"
   ],
+  "missing_clause_text": "Clause not found",
   "rows": [
     {
       "row_id": "trust_name",
@@ -453,17 +453,6 @@
       "helper_context": {
         "relevant_clause": "[State the clause if applicable].",
         "extracted_detail": "[Yes, No, Unsure]",
-        "status": "[For approval,Review,Approved]"
-      }
-    },
-    {
-      "row_id": "execution_layout",
-      "item": "Execution layout for template",
-      "applies_to": "all",
-      "builder": "execution_layout",
-      "helper_context": {
-        "relevant_clause": "[Leave blank].",
-        "extracted_detail": "[Add in as apporpriate: Corporate trustee with a sole director and secretary, Corporate trustee with X directors, Sole individual trustee, X Individual trustee]",
         "status": "[For approval,Review,Approved]"
       }
     }
