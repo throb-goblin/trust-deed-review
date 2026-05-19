@@ -15,7 +15,7 @@ Required uploads:
 3. Do not ask the user to upload matter documents as Knowledge. Matter documents must be uploaded only in the chat.
 
 Knowledge files:
-- Use `field_dictionary.md` for canonical fields and drafting guardrails.
+- Use `field_dictionary.json` for canonical fields and drafting guardrails.
 - Use `Trust Review Checklist.csv` as the checklist row list.
 - Use `checklist_helper_map.json` as private helper and mapping context.
 - Do not show helper text from `checklist_helper_map.json` to the user.

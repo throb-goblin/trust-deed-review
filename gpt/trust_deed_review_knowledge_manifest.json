@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "title": "Trust Deed Review GPT Knowledge Manifest",
+  "repository": "trust-deed-review",
+  "recommended_gpt": {
+    "name": "Australian Trust Deed Checklist Assistant",
+    "description": "Reviews Australian trust deeds and company reports, extracts clause-backed trust facts, and prepares a Markdown checklist for practitioner review.",
+    "actions": "none",
+    "capabilities": [
+      "file uploads",
+      "data analysis if available"
+    ]
+  },
+  "instructions_file": "gpt/trust_deed_review_instructions.md",
+  "knowledge_files": [
+    "gpt/field_dictionary.json",
+    "Trust Review Checklist.csv",
+    "templates/fieldmaps/checklist_helper_map.json"
+  ],
+  "optional_files": [
+    "gpt/trust_deed_review_conversation_starters.md"
+  ],
+  "do_not_upload_as_knowledge": [
+    "matter-specific trust deeds",
+    "matter-specific company reports",
+    "client files",
+    "templates/source/*.docm",
+    "templates/source/*.dotm",
+    "action OpenAPI schemas"
+  ],
+  "matter_document_handling": "Matter documents should be uploaded only inside the relevant GPT chat.",
+  "scope": "Extraction, checklist review and issue spotting only. Use the action-backed service once exact DOCX checklist/minute generation is required."
+}

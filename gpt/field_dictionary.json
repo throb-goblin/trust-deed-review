@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "title": "Trust Deed Review Field Dictionary",
+  "purpose": "Canonical field, evidence and drafting guardrail reference for the no-action trust deed review GPT.",
+  "extracted_value_shape": {
+    "required_keys": [
+      "value",
+      "source_document_id",
+      "page",
+      "clause_ref",
+      "heading",
+      "quote",
+      "confidence",
+      "issue_if_any"
+    ],
+    "confidence_values": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "quote_word_limit": 50
+  },
+  "linked_clause_fields": [
+    {
+      "field_path": "trust.vesting.clause_ref",
+      "description": "Vesting, termination or perpetuity-period provision reference."
+    },
+    {
+      "field_path": "trust.vesting.date",
+      "description": "Latest vesting date, termination date or formula/mechanism by which trust assets must vest."
+    },
+    {
+      "field_path": "income.definition_clause_ref",
+      "description": "Trust income, net income or distributable income definition."
+    },
+    {
+      "field_path": "income.distribution_power_clause_ref",
+      "description": "Trustee power or obligation to distribute, pay or accumulate income."
+    },
+    {
+      "field_path": "income.streaming_clause_ref",
+      "description": "Power to stream or classify income."
+    },
+    {
+      "field_path": "income.accumulation_clause_ref",
+      "description": "Power to accumulate income."
+    },
+    {
+      "field_path": "capital.determination_clause_ref",
+      "description": "Power to determine, allocate or advance capital."
+    },
+    {
+      "field_path": "beneficiaries.definition_clause_ref",
+      "description": "Beneficiary definition for discretionary trusts."
+    },
+    {
+      "field_path": "unitholders.register_clause_ref",
+      "description": "Unit register or unitholder definition for unit trusts."
+    },
+    {
+      "field_path": "distribution.method_clause_ref",
+      "description": "Clause supporting the method of distribution."
+    },
+    {
+      "field_path": "distribution.resolution_deadline_clause_ref",
+      "description": "Clause requiring resolution before a specific date, including before 30 June."
+    },
+    {
+      "field_path": "amendment_review.power_clause_ref",
+      "description": "Power to amend or vary the deed."
+    }
+  ],
+  "checklist_output": {
+    "source_rows": "Trust Review Checklist.csv",
+    "helper_map": "templates/fieldmaps/checklist_helper_map.json",
+    "columns": [
+      "Item",
+      "Relevant clause(s)",
+      "Extracted detail",
+      "Status"
+    ],
+    "status_values": [
+      "For approval",
+      "Review",
+      "Approved"
+    ],
+    "missing_clause_text": "Clause not found",
+    "helper_text_policy": "Do not show helper text, JSON paths or internal mapping notes to the user."
+  },
+  "trust_type_extraction": {
+    "unit": [
+      "unit",
+      "units",
+      "unit holder",
+      "unitholder",
+      "initial unitholder",
+      "unit register",
+      "unit certificate"
+    ],
+    "discretionary": "Discretionary/family trust wording and beneficiary-class concepts without substantive unit-capital language.",
+    "do_not_classify_as_unit_if": "The only unit wording is in investment powers referring to acquiring units in another trust or company.",
+    "unclear": "If both concepts appear or evidence is unclear, mark trust type as Review and ask the user to confirm."
+  },
+  "vesting_extraction": {
+    "goal": "Identify the latest date or mechanism by which trust assets vest.",
+    "search_terms": [
+      "Vesting Date",
+      "Vesting Day",
+      "Termination Date",
+      "perpetuity period",
+      "rule against perpetuities",
+      "less one day"
+    ],
+    "calculation_rule": "Calculate or state a calendar date only if the deed date, governing law and formula clearly support it.",
+    "uncertain_formula_rule": "If a formula depends on uncertain governing law, lives in being, commencement legislation or another unresolved fact, record the formula and mark it for review."
+  },
+  "perpetuity_guide": {
+    "New South Wales": "80 years from the date the settlement takes effect.",
+    "Victoria": "80 years from the date the settlement takes effect.",
+    "Queensland": "125 years from the day the disposition is made unless the trust terms state or imply a shorter period. The 125-year regime commenced on 1 August 2025.",
+    "South Australia": "No fixed statutory perpetuity period; rules against perpetuities and excessive accumulations are abolished.",
+    "Western Australia": "80 years from the date the settlement takes effect.",
+    "Tasmania": "80 years from the date the settlement takes effect.",
+    "Australian Capital Territory": "80 years from the date the settlement takes effect.",
+    "Northern Territory": "Lives in being plus 21 years, or 80 years from settlement taking effect, whichever the settlement specifies; if none is specified, 80 years applies."
+  },
+  "review_blockers": [
+    "Trust type is unsure.",
+    "Trustee type is unresolved.",
+    "Corporate trustee details are missing where a corporate trustee is required.",
+    "Trust instrument is missing.",
+    "Vesting date or vesting clause is missing.",
+    "Income definition or distribution power clause is missing.",
+    "A deed amendment is noted but the amended deed is not included."
+  ],
+  "drafting_guardrails": [
+    "Never guess a clause number.",
+    "Use Clause not found where the deed does not disclose a clause.",
+    "Preserve evidence and confidence for practitioner review.",
+    "Generated checklists and summaries are drafting aids for review by an Australian legal practitioner."
+  ]
+}

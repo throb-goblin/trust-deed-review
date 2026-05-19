@@ -7,9 +7,9 @@ It does not call external endpoints and does not generate final Word minute temp
 ## Files
 
 - `gpt/trust_deed_review_instructions.md`: Custom GPT instructions.
-- `gpt/trust_deed_review_knowledge_manifest.md`: Setup checklist for GPT Knowledge.
+- `gpt/trust_deed_review_knowledge_manifest.json`: Setup checklist for GPT Knowledge.
 - `gpt/trust_deed_review_conversation_starters.md`: Optional conversation starters.
-- `gpt/field_dictionary.md`: Canonical fields and drafting guardrails.
+- `gpt/field_dictionary.json`: Canonical fields and drafting guardrails.
 - `Trust Review Checklist.csv`: Clean checklist row list.
 - `templates/fieldmaps/checklist_helper_map.json`: Private helper and mapping context.
 
@@ -17,7 +17,7 @@ It does not call external endpoints and does not generate final Word minute temp
 
 1. Create a Custom GPT with no Actions.
 2. Paste `gpt/trust_deed_review_instructions.md` into the Instructions field.
-3. Upload the Knowledge files listed in `gpt/trust_deed_review_knowledge_manifest.md`.
+3. Upload the Knowledge files listed in `gpt/trust_deed_review_knowledge_manifest.json`.
 4. Enable file upload/data analysis if available.
 5. Ask users to upload matter-specific trust deeds and company reports inside the chat only.
 
